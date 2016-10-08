@@ -1,0 +1,13 @@
+<table>
+	<thead>
+		<tr><th colspan="6">Race Calendar</th></tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="race in racesList">
+			<td>{{$index + 1}}</td>
+			<td>
+				<img src="img/flags/{{race}}.png"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
