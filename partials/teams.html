@@ -1,1 +1,20 @@
-
+<table>
+	<thead>
+		<tr><th colspan="6">Constructor Championship Standings</th></tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="team in teams">
+			<td>{{team.position}}</td>
+			<td>
+				<img src="img/flags/{{team.Constructor.nationality}}.png"/>
+				<a href="#/teams/{{team.Constructor.constructorId}}">
+					{{team.Constructor.name}}
+				</a>
+				<td>
+					<a href="{{team.Constructor.url}}">Details</a>
+				</td>
+				<td>{{team.points}}</td>
+			</td>
+		</tr>
+	</tbody>
+</table>

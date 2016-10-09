@@ -23,4 +23,20 @@ angular.module('F1FeederApp.controllers', [])
 	ergastAPIservice.getDriverRaces($scope.id).success(function (response) {
 		$scope.races = response.MRData.RaceTable.Races; 
 	}); 
+})
+.controller('teamsController', function($scope, ergastAPIservice){
+	$scope.teams = [];
+
+	ergastAPIservice.getTeams().success(function(response){
+		$scope.teams = response.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
+		console.log($scope.teams);
+	});
+})
+.controller('racesController', function($scope, ergastAPIservice){
+	$scope.races = [];
+
+	ergastAPIservice.getRaces().success(function(response){
+		$scope.races = response.MRData.RaceTable.Races;
+		console.log($scope.races);
+	});
 });

@@ -23,5 +23,19 @@ angular.module('F1FeederApp.services', [])
 		});
 	}
 
+	ergastAPI.getTeams = function(){
+		return $http({
+			method: 'JSONP',
+			url: 'http://ergast.com/api/f1/2016/constructorStandings.json?callback=JSON_CALLBACK'
+		});
+	}
+
+	ergastAPI.getRaces = function(){
+		return $http({
+			method: 'JSONP',
+			url: 'http://ergast.com/api/f1/2016/results/1.json?callback=JSON_CALLBACK'
+		});
+	}
+
 	return ergastAPI;
 });
