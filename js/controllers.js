@@ -4,10 +4,10 @@ angular.module('F1FeederApp.controllers', [])
 	$scope.driversList = [];
 	$scope.searchFilter = function (driver) {
 		var re = new RegExp($scope.nameFilter, 'i');
-		return !$scope.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName);
+		return !$scope.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName) || re.test(driver.Constructors[0].name);
 	}
 
-	ergastAPIservice.getDrivers().success(function (response) {
+	ergastAPIservice.getDrivers(2016).success(function (response) {
 		$scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
 	});
 })
@@ -16,18 +16,20 @@ angular.module('F1FeederApp.controllers', [])
 	$scope.races = [];
 	$scope.driver = null;
 
-	ergastAPIservice.getDriverDetails($scope.id).success(function (response) {
-		$scope.driver = response.MRData.StandingsTable.StandingsLists[0].DriverStandings[0]; 
+	ergastAPIservice.getDriverDetails($scope.id, 2016).success(function (response) {
+		$scope.driver = response.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
+		console.log($scope.driver);
 	});
 
-	ergastAPIservice.getDriverRaces($scope.id).success(function (response) {
-		$scope.races = response.MRData.RaceTable.Races; 
+	ergastAPIservice.getDriverRaces($scope.id, 2016).success(function (response) {
+		$scope.races = response.MRData.RaceTable.Races;
+		console.log($scope.races);
 	}); 
 })
 .controller('teamsController', function($scope, ergastAPIservice){
 	$scope.teams = [];
 
-	ergastAPIservice.getTeams().success(function(response){
+	ergastAPIservice.getTeams(2016).success(function(response){
 		$scope.teams = response.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
 		console.log($scope.teams);
 	});
@@ -35,8 +37,18 @@ angular.module('F1FeederApp.controllers', [])
 .controller('racesController', function($scope, ergastAPIservice){
 	$scope.races = [];
 
-	ergastAPIservice.getRaces().success(function(response){
+	ergastAPIservice.getRaces(2016).success(function(response){
 		$scope.races = response.MRData.RaceTable.Races;
 		console.log($scope.races);
+	});
+})
+.controller('raceController', function($scope, $routeParams, ergastAPIservice){
+	$scope.id = $routeParams.id;
+	$scope.drivers = [];
+	$scope.race = null;
+
+	ergastAPIservice.getRaces(2016).success(function(response){
+		$scope.drivers;
+		console.log($scope.drivers);
 	});
 });
