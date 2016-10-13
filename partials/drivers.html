@@ -18,11 +18,11 @@
 						<td>{{$index + 1}}</td>
 						<td>
 							<img src="img/flags/{{driver.Driver.nationality}}.png" />
-							<a href="#/drivers/{{driver.Driver.driverId}}">
+							<a ng-href="#/drivers/{{driver.Driver.driverId}}">
 								{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
 							</a>
 						</td>
-						<td><a href="#/teams/{{team.Constructor.constructorId}}">{{driver.Constructors[0].name}}</a></td>
+						<td><a ng-href="#/teams/{{driver.Constructors[0].constructorId}}">{{driver.Constructors[0].name}}</a></td>
 						<td>{{driver.points}}</td>
 					</tr>
 				</tbody>

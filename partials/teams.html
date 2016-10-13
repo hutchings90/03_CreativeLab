@@ -14,8 +14,8 @@
 					<tr ng-repeat="team in teams">
 						<td>{{team.position}}</td>
 						<td><img src="img/flags/{{team.Constructor.nationality}}.png"/></td>
-						<td>{{team.Constructor.name}}</td>
-						<td><a href="{{team.Constructor.url}}" target="_blank">Details</a></td>
+						<a ng-href="#/teams/{{team.Constructor.constructorId}}">
+						<td><a ng-href="{{team.Constructor.url}}" target="_blank">Details</a></td>
 						<td>{{team.points}}</td>						
 					</tr>
 				</tbody>

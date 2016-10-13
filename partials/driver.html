@@ -14,9 +14,9 @@
 				</div>
 				<div class="driver-status">
 				  <p>Country: {{driver.Driver.nationality}}</br>
-				  <a href="#/teams/{{driver.Constructor[0].constructorId}}">Team: {{driver.Constructors[0].name}}</a><br/>
+				  <a ng-href="#/teams/{{driver.Constructor[0].constructorId}}">Team: {{driver.Constructors[0].name}}</a><br/>
 				  Birth: {{driver.Driver.dateOfBirth}}<br/>
-				  <a href="{{driver.Driver.url}}" target="_blank">Biography</a>
+				  <a ng-href="{{driver.Driver.url}}" target="_blank">Biography</a>
 				  </p>
 				</div>
 			  </nav>
@@ -36,8 +36,8 @@
 					<tr ng-repeat="race in races">
 					  <td>{{race.round}}</td>
 					  <td><img  src="img/flags/{{race.Circuit.Location.country}}.png"/></td>
-					  <td>{{race.raceName}}</td>
-					  <td>{{race.Results[0].Constructor.name}}</td>
+					  <td><a ng-href="#/races/{{race.round}}">{{race.Circuit.Location.country}}</a></td>
+					  <td><a ng-href="#/teams/{{race.Results[0].Constructor.constructorId}}">{{race.Results[0].Constructor.name}}</a></td>
 					  <td>{{race.Results[0].grid}}</td>
 					  <td>{{race.Results[0].position}}</td>
 					</tr>
