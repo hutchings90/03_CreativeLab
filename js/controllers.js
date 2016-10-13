@@ -9,6 +9,7 @@ angular.module('F1FeederApp.controllers', [])
 
 	ergastAPIservice.getDrivers(2016).success(function (response) {
 		$scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+		console.log($scope.driversList);
 	});
 })
 .controller('driverController', function($scope, $routeParams, ergastAPIservice) {
@@ -32,6 +33,15 @@ angular.module('F1FeederApp.controllers', [])
 	ergastAPIservice.getTeams(2016).success(function(response){
 		$scope.teams = response.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
 		console.log($scope.teams);
+	});
+})
+.controller('teamController', function($scope, $routeParams, ergastAPIservice){
+	$scope.id = $routeParams.id;
+	$scope.team = null;
+
+	ergastAPIservice.getTeamDetails($scope.id, 2016).success(function(response){
+		$scope.team = response.MRData;
+		console.log($scope.team);
 	});
 })
 .controller('racesController', function($scope, ergastAPIservice){
