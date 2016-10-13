@@ -1,19 +1,39 @@
-<input type="text" ng-model="nameFilter" placeholder="Search..."/>
-<table>
-	<thead>
-		<tr><th colspan="6">Drivers Championship Standings</th></tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="driver in driversList | filter: searchFilter">
-			<td>{{$index + 1}}</td>
-			<td>
-				<img src="img/flags/{{driver.Driver.nationality}}.png" />
-				<a href="#/drivers/{{driver.Driver.driverId}}">
-					{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-				</a>
-			</td>
-			<td><a href="#/teams/{{team.Constructor.constructorId}}">{{driver.Constructors[0].name}}</a></td>
-			<td>{{driver.points}}</td>
-		</tr>
-	</tbody>
-</table>
+<div class="row">
+
+	<div class="col-md-2 col-md-offset-1">
+		<img src="../img/formula1_logo.jpg" class="f1_logo img-responsive"/>
+	</div>
+	
+	<div class="col-md-6">
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr><th colspan="6">Drivers Championship Standings</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+					  <td></td> <td>Driver</td> <td>Team</td> <td>Points</td>
+					</tr>
+					<tr ng-repeat="driver in driversList | filter: searchFilter">
+						<td>{{$index + 1}}</td>
+						<td>
+							<img src="img/flags/{{driver.Driver.nationality}}.png" />
+							<a href="#/drivers/{{driver.Driver.driverId}}">
+								{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+							</a>
+						</td>
+						<td><a href="#/teams/{{team.Constructor.constructorId}}">{{driver.Constructors[0].name}}</a></td>
+						<td>{{driver.points}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div class="col-md-2">
+		<div class="input-group">
+			<input type="text" class="search form-control" ng-model="nameFilter" placeholder="Search..."/>
+		</div>
+	</div>
+	
+</div>

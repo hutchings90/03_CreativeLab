@@ -1,20 +1,25 @@
-<table>
-	<thead>
-		<tr><th colspan="6">Constructor Championship Standings</th></tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="team in teams">
-			<td>{{team.position}}</td>
-			<td>
-				<img src="img/flags/{{team.Constructor.nationality}}.png"/>
-				<a href="#/teams/{{team.Constructor.constructorId}}">
-					{{team.Constructor.name}}
-				</a>
-				<td>
-					<a href="{{team.Constructor.url}}">Details</a>
-				</td>
-				<td>{{team.points}}</td>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-2 col-md-offset-1">
+			<a href="./#/drivers"><img src="../img/formula1_logo.jpg" class="f1_logo img-responsive"/></a>
+		</div>
+	
+		<div class="col-md-6">
+			<table class="table">
+				<thead>
+					<tr><th colspan="6">Constructor Championship Standings</th></tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="team in teams">
+						<td>{{team.position}}</td>
+						<td><img src="img/flags/{{team.Constructor.nationality}}.png"/></td>
+						<td>{{team.Constructor.name}}</td>
+						<td><a href="{{team.Constructor.url}}" target="_blank">Details</a></td>
+						<td>{{team.points}}</td>						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
