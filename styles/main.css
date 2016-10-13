@@ -17,6 +17,14 @@
 	background-color: #D43C3D;
 }
 
+.navbar a:link {
+	text-decoration: none;
+}
+
+.navbar a:visited {
+	text-decoration: none;
+}
+
 .navbar a:hover {
 	text-decoration: none;
 }
