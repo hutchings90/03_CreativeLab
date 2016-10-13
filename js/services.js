@@ -30,10 +30,17 @@ angular.module('F1FeederApp.services', [])
 		});
 	}
 
-	ergastAPI.getTeamDetails = function(id, year){
+	ergastAPI.getTeamRaces = function(id, year){
 		return $http({
 			method: 'JSONP',
 			url: 'http://ergast.com/api/f1/' + year + '/constructors/' + id + '/results.json?callback=JSON_CALLBACK'
+		});
+	}
+
+	ergastAPI.getTeamDetails = function(id, year){
+		return $http({
+			method: 'JSONP',
+			url: 'http://ergast.com/api/f1/' + year + '/constructors/' + id + '.json?callback=JSON_CALLBACK'
 		});
 	}
 

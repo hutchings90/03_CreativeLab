@@ -37,7 +37,13 @@ angular.module('F1FeederApp.controllers', [])
 })
 .controller('teamController', function($scope, $routeParams, ergastAPIservice){
 	$scope.id = $routeParams.id;
+	$scope.races = [];
 	$scope.team = null;
+
+	ergastAPIservice.getTeamRaces($scope.id, 2016).success(function(response){
+		$scope.races = response.MRData.RaceTable.Races;
+		console.log($scope.races);
+	});
 
 	ergastAPIservice.getTeamDetails($scope.id, 2016).success(function(response){
 		$scope.team = response.MRData;

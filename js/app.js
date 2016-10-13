@@ -8,7 +8,7 @@ angular.module('F1FeederApp', [
 		.when("/drivers", {templateUrl: "partials/drivers.html", controller: "driversController"})
 		.when("/drivers/:id", {templateUrl: "partials/driver.html", controller: "driverController"})
 		.when("/teams", {templateUrl: "partials/teams.html", controller: "teamsController"})
-		.when("/teams/:id", {templateUrl: "partials/team.html", controller: "teamController"})
+		//.when("/teams/:id", {templateUrl: "partials/team.html", controller: "teamController"})
 		.when("/races", {templateUrl: "partials/races.html", controller: "racesController"})
 		.otherwise({redirectTo: '/drivers'});
 }]);

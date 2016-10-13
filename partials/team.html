@@ -5,8 +5,8 @@
 	</div>
 	<div class="team-status">
 		Country: {{team.nationality}}<br/>
-		Position:<br/>
-		Points:<br/>
+		Position: {{}}<br/>
+		Points: {{}}<br/>
 		History: {{team.url}}
 	</div>
 
@@ -20,11 +20,11 @@
 					<td>Round</td> <td>Grand Prix</td> <td>Driver 1</td> <td>Driver 2</td> <td>Points</td>
 				</tr>
 				<tr ng-repeat="race in races">
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{race.round}}</td>
+					<td>{{race.raceName}</td>
+					<td>{{}}</td>
+					<td>{{}}</td>
+					<td>{{}}</td>
 				</tr>
 			</tbody>
 		</table>
