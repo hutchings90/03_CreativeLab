@@ -1,7 +1,7 @@
 <div class="row">
 
 	<div class="col-md-2 col-md-offset-1">
-		<img src="../img/formula1_logo.jpg" class="f1_logo img-responsive"/>
+		<a href="./#/drivers"><img src="../img/formula1_logo.jpg" class="f1_logo img-responsive" id="offset"/></a>
 	</div>
 	
 	<div class="col-md-6">
@@ -22,7 +22,7 @@
 								{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
 							</a>
 						</td>
-						<td><a ng-href="#/teams/{{driver.Constructors[0].constructorId}}">{{driver.Constructors[0].name}}</a></td>
+						<td><a ng-href="#/teams">{{driver.Constructors[0].name}}</a></td>
 						<td>{{driver.points}}</td>
 					</tr>
 				</tbody>
