@@ -6,7 +6,7 @@
 		</div>
 	
 		<div class="col-md-8">
-			<table class="table">
+			<table class="table table-hover">
 				<thead>
 					<tr><th colspan="8">Race Calendar</th></tr>
 				</thead>
@@ -14,7 +14,7 @@
 					<tr>
 						<td>Round</td> <td>Grand Prix</td> <td>Circuit</td> <td>Date</td> <td>Winner</td>
 					</tr>
-					<tr ng-repeat="race in races">
+					<tr ng-repeat="race in races | orderBy:'race.date':true ">
 						<td>{{race.round}}</td>
 						<td>
 							<img src="img/flags/{{race.Circuit.Location.country}}.png"/>
