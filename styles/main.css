@@ -62,3 +62,34 @@ body {
 .table-hover tbody tr:hover a, .table-hover tbody tr:hover a {
   color: #D43C3D;
 }
+
+.navbar-default .navbar-nav>li>a {
+	color: #f5f5f5;
+	font-weight: bold;
+}
+
+.navbar-nav>li>a:visited {
+	color: #f5f5f5 !important;
+}
+
+.navbar-nav>li>a:hover {
+	color: #777 !important;
+}
+
+.navbar-brand {
+	color: #f5f5f5 !important;
+	font-size: 170%;
+}
+
+.navbar-brand a:hover {
+	color: #777 !important;
+}
+
+.navbar>.container {
+	padding-left: 0px;
+	margin-left: 5px;
+}
+
+.bold {
+	font-weight: bold;
+}

@@ -14,11 +14,7 @@
 	  
 		<title>F-1 Feeder</title>
 	</head>
-	<body ng-app="F1FeederApp">
-		<a href="#/">Home</a>
-		<a href="#/drivers">Drivers</a>
-		<a href="#/teams">Teams</a>
-		<a href="#/races">Races</a>
+	<body ng-app="F1FeederApp" body data-spy="scroll" data-target=".navbar-collapse">
 		<div class="navbar navbar-default nav">
 			<div class="container">
 				<div class="navbar-header">
@@ -31,10 +27,17 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					
+				<a class="navbar-brand brand" href="#">Formula 1 Racing</a>	
 				</div> <!--/.navbar-header -->
 				
-				<a href="#/"><h3 style="text-align:center; color: white">Forumla 1 Racing</h3></a>
+				<!-- Navbar collapse -->
+				<div class="collapse navbar-collapse nav-links">
+					<ul class="nav navbar-nav bold">
+						<li><a href="#/drivers">Drivers</a></li>
+						<li><a href="#/teams">Teams</a></li>
+						<li><a href="#/races">Races</a></li>
+					</ul>
+				</div> <!--/.navbar-collapse -->
 			</div> <!--/.container -->
 
 		</div> <!--/.navbar .navbar-default -->

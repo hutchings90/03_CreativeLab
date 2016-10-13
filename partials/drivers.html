@@ -8,7 +8,7 @@
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
-					<tr><th colspan="6">Drivers Championship Standings</th></tr>
+					<tr><th colspan="6" class="bold">Drivers Championship Standings</th></tr>
 				</thead>
 				<tbody>
 					<tr>
@@ -22,7 +22,7 @@
 								{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
 							</a>
 						</td>
-						<td><a ng-href="#/teams" class="team-name">{{driver.Constructors[0].name}}</a></td>
+						<td>{{driver.Constructors[0].name}}</td>
 						<td>{{driver.points}}</td>
 					</tr>
 				</tbody>

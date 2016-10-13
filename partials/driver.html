@@ -8,13 +8,13 @@
 				<div class="driver-picture">
 				  <div class="avatar center">
 					<img class="img-responsive img-circle center" ng-show="driver" src="img/drivers/{{driver.Driver.driverId}}.png"/>
-					<p class="center">{{driver.Driver.givenName}} {{driver.Driver.familyName}}</p>
+					<p class="center bold">{{driver.Driver.givenName}} {{driver.Driver.familyName}}</p>
 					<img class="center" ng-show="driver" src="img/flags/{{driver.Driver.nationality}}.png" /><br/>
 				  </div>
 				</div>
-				<div class="driver-status center">
+				<div class="driver-status center bold">
 				  <p>Country: {{driver.Driver.nationality}}</br>
-				  <a ng-href="{{driver.Constructors[0].url}}" target="_blank">Team: {{driver.Constructors[0].name}}</a><br/>
+				  Team: {{driver.Constructors[0].name}}<br/>
 				  Birth: {{driver.Driver.dateOfBirth}}<br/>
 				  <a ng-href="{{driver.Driver.url}}" target="_blank">Biography</a>
 				  </p>
@@ -27,7 +27,7 @@
 			  <div class="main-content">
 				<table class="result-table table table-hover">
 				  <thead>
-					<tr><th colspan="6">Formula 1 2016 Results</th></tr>
+					<tr><th colspan="6" class="bold">Formula 1 2016 Results</th></tr>
 				  </thead>
 				  <tbody>
 					<tr>
@@ -35,8 +35,8 @@
 					</tr>
 					<tr ng-repeat="race in races">
 					  <td>{{race.round}}</td>
-					  <td><a ng-href="#/races"><img src="img/flags/{{race.Circuit.Location.country}}.png"/></a></td>
-					  <td><a ng-href="#/races">{{race.Circuit.Location.country}}</a></td>
+					  <td><img src="img/flags/{{race.Circuit.Location.country}}.png"/></td>
+					  <td>{{race.Circuit.Location.country}}</a></td>
 					  <td>{{race.Results[0].grid}}</td>
 					  <td>{{race.Results[0].position}}</td>
 					  <td>{{race.Results[0].points}}</td>
