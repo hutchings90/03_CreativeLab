@@ -1,0 +1,64 @@
+body {
+	background: url("../img/background.png");
+	height: 100%;
+	width: 100%;
+	background-repeat: repeat;
+}
+
+.table th{
+	color: #F5F5F5;
+}
+
+.table a {
+	color: #F5F5F5;
+}
+
+.team-name {
+	padding-top: 5px;
+}
+
+.search {
+	margin-top: 35px;
+}
+
+.f1_logo {
+	max-width: 100%;
+	max-height: 100%;
+	margin-top: 20px;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.navbar {
+	background-color: #D43C3D;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar a:link {
+	text-decoration: none;
+}
+
+.navbar a:visited {
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	text-decoration: none;
+}
+
+.driver-status a {
+	color: #F5F5F5;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #dbd9d9;
+}
+
+.table-hover tbody tr:hover a, .table-hover tbody tr:hover a {
+  color: #D43C3D;
+}
